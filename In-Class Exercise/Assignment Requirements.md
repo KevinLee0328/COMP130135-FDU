@@ -1,4 +1,4 @@
-# Assignment Requirements
+# In-Class Exercise
 
 ## ICE1
 
