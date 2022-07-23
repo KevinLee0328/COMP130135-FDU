@@ -1,3 +1,5 @@
+# Assignment Requirements
+
 ## HW1
 
 ### HW1_1.
@@ -175,3 +177,47 @@ q2.output();
 ```
 > PS. 模板类Queue的定义请参考Queue.h. 注意: 简单的成员函数可在类定义内部实现.
 
+## HW7
+
+### HW7_1.
+> 认真阅读课本第12章, 实现string类的简易版本Str. 利用自定义的Str类取代HW1_1中的string类, 输出加框的问候语. 并增加程序语句用以测试重载定义的索引操作符. 要求: 与课本上实现一致, 即Str类基于Vec类定义.
+
+### HW7_2.
+> 输入若干单词, 按字典顺序输出每个单词及其出现次数. 要求: 1) 使用自定义的Str类保存单词, 使用自定义的Vec类保存所有单词; 2) 使用sort库算法对单词排序. 根据要求适当增加Str类的接口.
+
+## HW8
+
+### HW8_1.
+> 认真复习第13章已讲到的内容, 完成混合学生课程总评成绩的程序. 包含本科生和研究生的成绩文件见grades2, 实现混合成绩的读入和总评成绩的计算, 按名字的字母顺序输出.
+
+### HW8_2.
+> 定义抽象基类Shape以及三个派生类Triangle, Rectangle和Circle. 在主函数中读取包含三种派生类对象的文件shapes, 求每个对象的面积和周长, 按面积从小到大同时输出到显示器和文件result.csv, 保留3位有效数字.
+
+## HW9
+
+### HW9_1.
+> 用句柄类实现HW8_1.
+
+### HW9_2.
+> 用句柄类实现HW8_2. 要求: 
+>> 1. 将圆周率定义为圆的静态成员;
+>> 2. 将程序组织为5个文件, 如下,
+>>> handle.h  
+>>> shape.h  
+>>> handle.cpp  
+>>> main.cpp  
+>>> shape.cpp  
+>>> 
+>> 3. 主函数如下,
+```C++
+int main()
+{
+	vector<Handle> shapes;
+	ifstream infile("shapes");
+	readinfo(infile, shapes);
+	sort(shapes.begin(), shapes.end(), compare);
+	cal_output(shapes);
+	
+	return 0;
+}
+```
